@@ -2,6 +2,8 @@
 
 **Dokumentasi Teknis Lengkap (DED) – Embedded System Engineer**
 
+![Demo Robot](assets/Running_Text_Elektronika.jpeg)
+
 ---
 
 ## 1. Tentang Sistem
