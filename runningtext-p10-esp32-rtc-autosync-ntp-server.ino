@@ -15,6 +15,8 @@ BOARD VERSION : ESP32 Dev Module v1.0.6
 RunningText display;
 RTCAutoSync main_rtc;
 
+// String space_text = "              ";
+
 String text_utama =
 // "Selamat Datang di Bengkel Jurusan Teknik Elektro";
 "Selamat Datang di Bengkel Jurusan Teknik Elektro  |  Prodi Teknik Elektronika              Politeknik Negeri Sriwijaya              Utamakan Keselamatan dan Kesehatan Kerja";
@@ -31,6 +33,7 @@ void setup() {
   main_rtc.begin();
   display.begin();
 
+  // DISPLAY SPEED
   display.setSpeed(20);
 
   Serial.println("[MAIN] runningtext_p10_esp32_rtc_autosync_ntp_server");
@@ -73,7 +76,7 @@ void loop() {
     display.sceneRTC(
       tanggal,
       waktu,
-      180000
+      (3 * 60) * 1000 //DURASI TAMPIL SCENE RTC
     );
 
     scene = 2;

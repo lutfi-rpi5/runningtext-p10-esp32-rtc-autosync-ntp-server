@@ -99,7 +99,7 @@ Atau download ZIP dari GitHub
 
 ---
 
-### 2. Install ESP32 Board
+### 2. Install ESP32 Board v1.0.6
 
 Buka Arduino IDE:
 
@@ -122,7 +122,7 @@ Tools → Board → Board Manager
 Install:
 
 ```
-ESP32 by Espressif Systems Versi 1.0.5
+ESP32 by Espressif Systems Versi 1.0.6
 ```
 
 ---
@@ -173,6 +173,9 @@ runningtext-p10-esp32-rtc-autosync-ntp-server
 │
 ├── virtuabotixRTC.cpp
 ├── virtuabotixRTC.h
+│
+├── buzzer.cpp
+├── buzzer.h
 │
 └── README.md
 ```

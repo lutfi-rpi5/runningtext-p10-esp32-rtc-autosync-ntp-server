@@ -266,8 +266,8 @@ void RunningText::drawRTC() {
   // int x1 = (128 - width1) / 2;
   // int x2 = (128 - width2) / 2;
 
-  int x1 = (32 * 3 - width1) / 2;
-  int x2 = (32 * 3 - width2) / 2;
+  int x1 = (32 * DISPLAYS_ACROSS - width1) / 2;
+  int x2 = (32 * DISPLAYS_ACROSS - width2) / 2;
 
   char line1[64];
   char line2[64];
