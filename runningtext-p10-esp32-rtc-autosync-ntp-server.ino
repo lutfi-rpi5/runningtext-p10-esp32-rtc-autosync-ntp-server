@@ -5,31 +5,43 @@ PROGRAM NAME :
 DATE          : 03-4-2026
 AUTHOR        : Muhammad Lutfi Nur Anendi
 BOARD         : ESP32 WROOM-32
-BOARD VERSION : ESP32 Dev Module v1.0.5
+BOARD VERSION : ESP32 Dev Module v1.0.6
 */
 
 #include "runningtext.h"
 #include "rtc_autosync.h"
+#include "buzzer.h"
 
 RunningText display;
 RTCAutoSync main_rtc;
 
 String text_utama =
-"Selamat Datang di Bengkel Jurusan Teknik Elektro  |  Prodi Teknik Telekomunikasi              Politeknik Negeri Sriwijaya              Utamakan Keselamatan dan Kesehatan Kerja";
+// "Selamat Datang di Bengkel Jurusan Teknik Elektro";
+"Selamat Datang di Bengkel Jurusan Teknik Elektro  |  Prodi Teknik Elektronika              Politeknik Negeri Sriwijaya              Utamakan Keselamatan dan Kesehatan Kerja";
 
 void setup() {
 
-  Serial.begin(115200);
+  Serial.begin(115200); 
 
+  delay(500);
+
+  // digitalWrite(33, HIGH);
+
+  buzzer.begin(33);
   main_rtc.begin();
   display.begin();
 
   display.setSpeed(20);
+
+  Serial.println("[MAIN] runningtext_p10_esp32_rtc_autosync_ntp_server");
+  Serial.println("[MAIN] System is Starting...");
+  Serial.println("[MAIN] _____________________________________________");
+  buzzer.beepLong(1000);
 }
 
 void loop() {
 
-  main_rtc.update();
+  // main_rtc.update();
 
   static uint8_t scene = 0;
   static unsigned long rtc_timer = 0;
@@ -81,4 +93,5 @@ void loop() {
   }
 
   display.update();
+  buzzer.update();
 }

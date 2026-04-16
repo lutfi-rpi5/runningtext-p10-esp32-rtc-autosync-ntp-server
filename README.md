@@ -65,23 +65,24 @@ Sesuaikan dengan kebutuhan hardware
 
 Contoh konfigurasi:
 
-### P10 Panel
+### P10 Panel -> ESP32
 
 ```
-CLK  -> GPIO 18
-LAT  -> GPIO 5
-OE   -> GPIO 15
-A    -> GPIO 16
-B    -> GPIO 17
-DATA -> GPIO 4
+GND -> GND
+OE  -> GPIO 22
+A   -> GPIO 19
+B   -> GPIO 21
+CLK -> GPIO 18
+LAT -> GPIO 2
+DR  -> GPIO 23
 ```
 
-### RTC
+### RTC -> ESP32
 
 ```
-CLK -> GPIO XX
-DAT -> GPIO XX
-RST -> GPIO XX
+CLK -> GPIO 25
+DAT -> GPIO 26
+RST -> GPIO 27
 ```
 
 ---
@@ -121,12 +122,18 @@ Tools → Board → Board Manager
 Install:
 
 ```
-ESP32 by Espressif Systems
+ESP32 by Espressif Systems Versi 1.0.5
 ```
 
 ---
 
 ## 📚 Required Libraries
+
+### Perlu Install
+
+Library berikut perlu di-install:
+* DMD32 (search on Library Manager Arduino IDE)
+
 
 ### Tidak Perlu Install (Built-in ESP32)
 
@@ -137,7 +144,6 @@ Library berikut sudah tersedia:
 * SPI.h
 * Wire.h
 
----
 
 ### Library Sudah Termasuk Dalam Project
 
@@ -259,8 +265,17 @@ Jika WiFi kembali
 Edit konfigurasi WiFi:
 
 ```
+//rtc_autosync.cpp
 const char* ssid = "YOUR_WIFI";
 const char* password = "YOUR_PASSWORD";
+```
+
+Edit konfigurasi Zona Waktu:
+
+```
+//rtc_autosync.cpp
+const long gmtOffset_sec = 25200; // Example: WIB GMT+7 * 3600 = 25200
+const int daylightOffset_sec = 0;
 ```
 
 ---
@@ -269,7 +284,7 @@ const char* password = "YOUR_PASSWORD";
 
 Default:
 
-* Sync setiap 1 jam
+* Sync setiap 10 menit
 * Non blocking
 
 Bisa diubah pada:

@@ -17,7 +17,7 @@ class RTCAutoSync {
 
     void syncNTP();
 
-    virtuabotixRTC myRTC = virtuabotixRTC(25,26,27);
+    virtuabotixRTC myRTC = virtuabotixRTC(25,26,27); // CLK, DATA, RESET
 
     bool wifiConnecting = false;
     unsigned long wifiTimer = 0;

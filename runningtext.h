@@ -20,7 +20,8 @@ class RunningText {
 
   private:
 
-    static void IRAM_ATTR triggerScan();
+    // static void IRAM_ATTR triggerScan();
+    static void triggerScan();
 
     void drawText();
     void drawRTC();
