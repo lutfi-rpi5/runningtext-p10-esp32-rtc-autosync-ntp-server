@@ -6,9 +6,9 @@
 
 ## 1. Tentang Sistem
 
-Sistem ini adalah **Running Text LED P10 berbasis ESP32** yang dirancang sebagai papan informasi digital cerdas. Keunggulan utamanya adalah ketahanan terhadap gangguan internet: display tetap menampilkan teks berjalan dan waktu dari **RTC (Real-Time Clock)** meskipun jaringan Wi-Fi tidak tersedia. Ketika koneksi internet kembali, sistem akan **secara otomatis menyinkronkan waktu dari server NTP (Network Time Protocol)** dan menyimpannya ke modul RTC, memastikan akurasi waktu yang tinggi tanpa campur tangan pengguna.
+<p align="justify">Sistem ini adalah **Running Text LED P10 berbasis ESP32** yang dirancang sebagai papan informasi digital cerdas. Keunggulan utamanya adalah ketahanan terhadap gangguan internet: display tetap menampilkan teks berjalan dan waktu dari **RTC (Real-Time Clock)** meskipun jaringan Wi-Fi tidak tersedia. Ketika koneksi internet kembali, sistem akan **secara otomatis menyinkronkan waktu dari server NTP (Network Time Protocol)** dan menyimpannya ke modul RTC, memastikan akurasi waktu yang tinggi tanpa campur tangan pengguna.
 
-Sistem dibangun dengan pendekatan **non-blocking** pada seluruh operasi (Wi-Fi, NTP, display), sehingga running text tetap berjalan lancar tanpa jeda yang mengganggu. Arsitektur modular memisahkan logika display, RTC, sinkronisasi NTP, dan buzzer ke dalam file terpisah, memudahkan pengembangan dan pemeliharaan.
+Sistem dibangun dengan pendekatan **non-blocking** pada seluruh operasi (Wi-Fi, NTP, display), sehingga running text tetap berjalan lancar tanpa jeda yang mengganggu. Arsitektur modular memisahkan logika display, RTC, sinkronisasi NTP, dan buzzer ke dalam file terpisah, memudahkan pengembangan dan pemeliharaan.</p>
 
 **Target Aplikasi:**
 
