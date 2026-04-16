@@ -237,6 +237,7 @@ display.sceneRTC( tanggal, waktu, (3 * 60) * 1000 ); // 3 menit
 |CLK	  | GPIO 18	   |Clock (Shift Register)|
 |LAT (STB)|	GPIO 2	   |Latch / Strobe|
 |DR (R1)  | GPIO 23	   |Data Red (untuk panel single-color)|
+
 **Catatan**: Untuk panel *single-color*, hanya gunakan pin **R1** (DR). Pin **G1** (hijau) dan **B1** (biru) tidak digunakan.
 
 ### 9.2 RTC (DS1302) → ESP32
@@ -253,6 +254,7 @@ display.sceneRTC( tanggal, waktu, (3 * 60) * 1000 ); // 3 menit
 |------------|-------------|
 |+ (Positif) |	GPIO 33    |
 |- (Negatif) |	GND        |
+
 **Catatan**: Buzzer dikonfigurasi active *LOW* (menyala saat pin diberi logika `LOW`). Jika menggunakan buzzer langsung tanpa relay, ubah logika di `buzzer.cpp` baris 4-5 sesuai komentar.
 
 ---
