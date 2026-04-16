@@ -279,8 +279,6 @@ runningtext-p10-esp32-rtc-autosync-ntp-server/
 
 ## 11. Troubleshooting
 
-## 11. Troubleshooting
-
 | **Masalah**                              | **Solusi**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Display tidak menyala / blank**        | - Periksa koneksi kabel P10 (OE, CLK, LAT, DR).<br>- Pastikan power supply 5V mencukupi (gunakan adaptor eksternal, bukan USB ESP32).                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -290,6 +288,7 @@ runningtext-p10-esp32-rtc-autosync-ntp-server/
 | **ESP32 bootloop (restart terus pada saat di Serial Monitor)**       | **Solusi Umum:** <br>- Buka Serial Monitor (baud 115200) dan periksa pesan error terakhir.<br>- Coba *flash* ulang firmware sambil menekan tombol **BOOT**.<br>- Pastikan power supply stabil (3.3V/5V) dan tidak ada korsleting pada pin GPIO.<br>- Hapus flash sepenuhnya dengan `esptool.py erase_flash` lalu upload ulang.<br><br>**Solusi Alternatif (Khusus Windows User – Pembersihan Cache & Instal Ulang Board Package):** <br>1. Buka **Board Manager** di Arduino IDE, cari **ESP32** by Espressif Systems, lalu klik **Remove** untuk menghapus versi yang terpasang (misal v1.0.6).<br>2. Tutup **semua jendela** Arduino IDE yang sedang berjalan.<br>3. Tekan tombol <kbd>Win</kbd> + <kbd>R</kbd>, ketik `%TEMP%` lalu tekan **Enter**. Pilih semua file dan folder (<kbd>Ctrl</kbd> + <kbd>A</kbd>) kemudian hapus permanen dengan <kbd>Shift</kbd> + <kbd>Delete</kbd>.<br>4. Ulangi langkah 3 untuk direktori **`temp`** dan **`PREFETCH`** (ketik masing‑masing pada dialog **Run**).<br>5. **Restart** komputer/laptop.<br>6. Buka kembali Arduino IDE, instal ulang **ESP32 Board Package versi 1.0.6** melalui Board Manager.<br>7. Coba upload ulang sketch. |
 | **Kompilasi error "DMD was not declared"** | Pastikan library **DMD32** sudah terinstal. Jika tetap error, coba hapus dan instal ulang library.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **ESP32 tidak terdeteksi di Arduino IDE** | - Tekan tombol BOOT saat uploading.<br>- Instal driver USB-to-Serial (CP210x atau CH340).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
 
 ## 12. Pengembangan Lebih Lanjut
 * **OTA Update**: Tambahkan fitur Over-the-Air untuk update firmware via Wi-Fi.
@@ -302,12 +301,10 @@ runningtext-p10-esp32-rtc-autosync-ntp-server/
 ## 13. Kontribusi
 Kontribusi dalam bentuk pull request atau issue sangat diterima. Pastikan kode mengikuti gaya penulisan yang konsisten dan terdokumentasi dengan baik.
 
----
 
 ## 14. Lisensi
 Proyek ini dilisensikan di bawah **MIT License**. Silakan gunakan, modifikasi, dan distribusikan sesuai kebutuhan.
 
----
 
 **Dokumentasi ini disusun berdasarkan analisis menyeluruh terhadap kode sumber, struktur proyek, dan best practice _embedded system engineering_. Untuk pertanyaan lebih lanjut, silakan buka _issue_ di repositori GitHub.**
 
