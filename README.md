@@ -1,6 +1,6 @@
 # Running Text P10 ESP32 + RTC + Auto Sync NTP Server
 
-**Dokumentasi Teknis Lengkap (DED) – Embedded System Engineer**
+**Detailed Engineering Design (DED) – Embedded System Engineer**
 
 ![Demo Sistem](assets/Running_Text_Elektronika.jpeg)
 
